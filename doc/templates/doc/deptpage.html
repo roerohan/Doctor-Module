@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style4.css' %}">
+  <title>Department Page</title>
+  <style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 12px 16px;
+        z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }</style>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+    <div class="container">
+      <h1 class="display-1">Doctor Directory</h1>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/about/">About</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blood Bank</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Doctor Directory
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/search/">Find A Doctor</a>
+              <a class="dropdown-item" href="/deptpage/0/">Search a Department</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ambulance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Billing</a>
+          </li>
+
+      </div>
+
+  </div>
+
+
+
+  <div class="container" style="padding: 10px;">
+    <h1>Choose your Department</h1>
+    <br>
+    <br>
+    <div class="row">
+
+      <div class="col-sm-6">
+        <div class="card card1">
+
+          <div class="card-body">
+            <br>
+            <br>
+
+            <img src="../../static/download.jpg" width="250px" height="120px" >
+
+            <a href="/deptpage/1/" class="btn btn-primary dept-btn">BOARD</a>
+
+            <br>
+            <br>
+
+            <img src="../../static/docteam.jpg" width="250px" height="120px" >
+            <a href="/dept/0/" class="btn btn-primary dept-btn">DOCTORS</a>
+
+            <br>
+            <br>
+
+            <img src="../../static/staff.jpg" width="250px" height="120px">
+            <a href="/deptpage/3/" class="btn btn-primary dept-btn" >STAFF</a>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+        <div class="card card2">
+
+          <div class="card-body">
+            <h5 class="card-title">Hospital Hierarchy</h5>
+            <p class="card-text">This is a tree structure to show the hierarchy of management in the hospital.</p>
+            <img src="{% static 'Figure_1.png' %}" class="card-img-top" alt="...">
+
+          </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <div class="col-md-12">
+        <div class="card card1">
+
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Qualification</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+              {% for i, j in context.items %}
+                <th scope="row">{{i}}</th>
+                {% for v, w in j.items %}
+                <td>{{w}}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+.btn{
+    border-radius: 800px;
+    font-size: 20px;
+    display: inline-block;
+    margin: auto;
+}
+.input-group{
+    width: 800px;
+    height: 25px;
+    top:20px;
+    left: 18px;
+
+}
+
+.card{
+    height: 200px;
+    border-color: black;
+}
+.dept-btn{
+    font-size: 20px;
+
+}
+.card-img-top{
+    width:286px;
+    height:200px;
+}
+table{
+    margin-left:4px;
+}

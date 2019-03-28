@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Department</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'style2.css' %}" >
+  <style>
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      padding: 12px 16px;
+      z-index: 1;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    .card{
+    height: 400px;
+    border-color: black;
+    }
+
+    .cardx{
+      height:200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=" jumbotron jumbotron-fluid bg-info text-white text-center">
+  <div class="container">
+    <h1 class="display-1">Doctor Directory</h1>
+  </div>
+  </div>
+
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/about/">About</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blood Bank</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Doctor Directory
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/search/">Find A Doctor</a>
+              <a class="dropdown-item" href="/deptpage/0/">Search a Department</a>
+
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ambulance</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Billing</a>
+          </li>
+
+      </div>
+  </div>
+
+
+  <div class="container" style="padding: 10px;">
+
+    <br>
+    <br>
+    <h1> Search A Department</h1>
+    <br>
+    <br>
+
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="card card1" style="width: 18rem;">
+          <img src="{% static '20125213167327797_20.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Cardiology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/1/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-sm-4">
+        <div class="card card2" style="width: 18rem;">
+          <img src="{% static 'picu-team.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Dermatology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/2/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card card3" style="width: 18rem;">
+          <img src=" {% static 'df206e8b-229a-4564-9bea-79a1c371ddc3.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gyaecology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/3/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <br>
+    <div class="row">
+
+      <div class="col-sm-4">
+        <div class="card card1" style="width: 18rem;">
+          <img src="{% static '20125213167327797_20.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Oncology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/4/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-4">
+        <div class="card card2" style="width: 18rem;">
+          <img src="{% static 'picu-team.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Hematology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/5/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm-4">
+        <div class="card card3" style="width: 18rem;">
+          <img src="{% static 'df206e8b-229a-4564-9bea-79a1c371ddc3.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Neurology</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
+            <a href="/dept/6/" class="btn btn-primary dept-btn">View Department</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <br>
+    <div class="col-md-12">
+      <div class="card cardx">
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Position</th>
+              <th scope="col">Fee</th>
+              <th scope="col">Timing</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for i, j in context.items %}
+              <tr>
+                <th scope="row">{{i}}</th>
+                {% for v, w in j.items %}
+                <td>{{w}}</td>
+                {% endfor %}
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </body>
+</html>
