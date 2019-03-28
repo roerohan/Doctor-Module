@@ -22,7 +22,8 @@ Here are the commands.
 - pip install matplotlib (optional)
 - pip install numpy (optional)
 ```
-Or, just do pip install requirements.txt
+Or, just do 
+- pip install requirements.txt
 
 ## Installing
 
