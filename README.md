@@ -11,7 +11,7 @@ Python libraries such as matplotlib and numpy have been used, which aren't reall
 
 ```
 
-### Prerequisites
+## Prerequisites
 
 Some packages are marked optional, you can remove the lines including them if you don't want to use them.
 Here are the commands.
@@ -23,7 +23,7 @@ Here are the commands.
 - pip install numpy (optional)
 ```
 
-### Installing
+## Installing
 
 Just clone and run  - python manage.py runserver
 
